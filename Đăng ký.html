@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Ký</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Đăng Ký</h1>
+        <p> Nếu bạn đã có tài khoản vui lòng:&nbsp;<a href="Đăng nhập.html">Đăng nhập</a></p>
+        <form>
+            <label for="username">Tên Đăng Nhập:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mật Khẩu:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Nhập Lại Mật Khẩu:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <label for="name">Họ và Tên:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="dob">Ngày Tháng Năm Sinh:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="province">Tỉnh/Thành Phố:</label>
+            <input type="text" id="province" name="province" required>
+
+            <label for="district">Quận/Huyện:</label>
+            <input type="text" id="district" name="district" required>
+
+            <label for="ward">Phường/Xã:</label>
+            <input type="text" id="ward" name="ward" required>
+
+            <label for="email">Gmail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Giới Tính:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Nam</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Nữ</label>
+
+            <label>
+                <input type="checkbox" required> Tôi đồng ý với quy định đăng ký&nbsp;&nbsp;<a href="quy định đăng ký.html" target="_blank">Quy định đăng ký</a>
+            </label>
+
+            <button type="submit">Đăng Ký</button>
+        </form>
+        <script>
+            document.getElementById('registration-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Ngăn chặn hành động mặc định của form
+    
+                // Có thể thêm mã kiểm tra ở đây (như kiểm tra mật khẩu khớp nhau)
+    
+                // Chuyển hướng đến trang thông báo
+                window.location.href = 'ĐK thành công.html';
+            });
+        </script>
+    </div>
+</body>
+</html>
